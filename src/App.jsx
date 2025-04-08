@@ -2,11 +2,12 @@ import { useState } from "react";
 import axios from "axios";
 
 function App() {
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("")
   const [weather, setWeather] = useState(null);
   const [forecast, setForecast] = useState([]);
 
-  const API_KEY = dc75f8a76ff873826044d9b7eafbdce9; 
+  const API_KEY = import.meta.env.VITE_API_KEY;
+
 
   const fetchWeather = async () => {
     try {
